@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+	<header th:replace="fragments :: header-auth"></header>
+	<div class="container container-padding">
+	<h5 class="alert-danger" th:if="${errorMessage}"
+			th:text="${errorMessage}"></h5>
+		<div th:if="${prescription}">
+			<h4>Fill in the prescription</h4>
+			<h5 class="alert-danger" th:if="${errorMessage}"
+				th:text="${errorMessage}"></h5>
+			<form id="prescriptionForm" th:object="${prescription}" method="POST">
+				<input th:field="*{insuranceProvider}" type="text"
+					class="form-control" placeholder="Insruance Provider" minlength="3"
+					maxlength="25" required /> <input th:field="*{policyNumber}"
+					name="policyNumber" type="number" class="form-control"
+					placeholder="Policy no" required /> <input
+					th:field="*{doctorName}" name="doctorName" type="text"
+					class="form-control" placeholder="Doctor Name" minlength="3"
+					maxlength="25" required /> <input th:field="*{prescriptionDate}"
+					th:value="*{prescriptionDate}" type="date" name="prescriptionDate"
+					class="form-control" placeholder="Prescription Date" required /> <input
+					th:field="*{location}" th:value="*{location}" name="location"
+					type="text" class="form-control" placeholder="Location" required
+					disabled /> <input th:field="*{drugId}" th:value="*{drugId}"
+					name="drugId" type="text" class="form-control"
+					placeholder="Drug ID" required disabled /> <input
+					th:field="*{definition}" name="definition" type="text"
+					class="form-control" placeholder="Definition " required /> <input
+					th:field="*{quantity}" name="quantity" type="number"
+					class="form-control" placeholder="Quantity" min="1" max="500"
+					required />
+
+				<div class="input-group">
+					<input th:field="*{courseDuration}" name="courseduration"
+						type="number" class="form-control" placeholder="Course Duration"
+						min="6" max="90" required />
+
+					<div class="input-group-prepend">
+						<div class="input-group-text">Days</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		window.onload = function() {
+			document.getElementById("policyNumber").value = "";
+			document.getElementById("quantity").value = "";
+			document.getElementById("courseDuration").value = "";
+		};
+	</script>
+</body>
+</html>

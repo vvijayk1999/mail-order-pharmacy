@@ -1,0 +1,146 @@
+.theme-color-1 {
+	background-color: #005bd1;
+}
+
+.theme-color-2 {
+	background-color: #2180fc;
+}
+
+.theme-color-3 {
+	background-color: #b6d6ff;
+}
+
+.color-white {
+	color: #fff;
+}
+
+.container-padding {
+	padding-top: 4em;
+}
+
+.container-card {
+	background-color: #b6d6ff;
+	padding: 1em;
+	border-radius: 5px;
+	margin-bottom: 1em;
+}
+
+.item-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	margin-bottom: 0.5em;
+	border-radius: 5px;
+	background-color: #2180fc;
+	color: #fff;
+}
+
+.card {
+	margin: 1.5em;
+}
+
+table.table-fit {
+	width: auto !important;
+	table-layout: auto !important;
+}
+
+table.table-fit thead th, table.table-fit tfoot th {
+	width: auto !important;
+}
+
+table.table-fit tbody td, table.table-fit tfoot td {
+	width: auto !important;
+}
+
+.theme-color-1 {
+	background-color: #005bd1;
+}
+
+.theme-color-2 {
+	background-color: #2180fc;
+}
+
+.theme-color-3 {
+	background-color: #b6d6ff;
+}
+
+.color-white {
+	color: #fff;
+}
+
+.container-card {
+	background-color: #b6d6ff;
+	padding: 1em;
+	border-radius: 5px;
+	margin-bottom: 1em;
+}
+
+.item-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	margin-bottom: 0.5em;
+	border-radius: 5px;
+	background-color: #2180fc;
+	color: #fff;
+}
+
+.main-img {
+	background-image: url('/resources/images/card-bg.jpg');
+	max-width: 100%;
+	border-radius: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main-text {
+	font-size: 3em;
+	color: #FFF;
+	margin-top: 80px;
+	margin-bottom: 30px;
+}
+
+.register-now-btn {
+	background-color: #005bd1;
+	color: #FFF;
+	font-size: 2em;
+	margin-bottom : 30px;
+	padding-left : 10px;
+	padding-right : 10px;
+	border-radius: 20px;
+}
+
+.center {
+	margin: auto;
+	padding: 10px;
+}
+.drugs{
+	padding: 10px;
+	padding-top: 20px;
+	margin-bottom: 100px;
+}
+.drug-item{
+	margin-bottom: 50px;
+}
+
+.drug-name{
+	font-size : 1.5em;
+}
+.site-footer{
+	padding-top : 50px;
+}
+.about-us{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.welcome-moto{
+	color: #FFF;
+	margin-bottom: 30px;
+}

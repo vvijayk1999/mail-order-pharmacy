@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments :: head"></head>
+<body>
+	<header th:replace="fragments :: header-auth"></header>
+	<div class="container container-padding">
+		<h5 class="alert-danger" th:if="${errorMessage}"
+			th:text="${errorMessage}"></h5>
+		<div th:if="${subscriptions}">
+		<h4 th:if="${#lists.isEmpty(subscriptions)}">Currently you are not subscribed to any drugs.</h4>
+		<h4 th:if="${not #lists.isEmpty(subscriptions)}" >Here are your subscriptions.</h4>
+		<table th:if="${not #lists.isEmpty(subscriptions)}" class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th>Drug Name</th>
+					<th>Quantity</th>
+					<th>Refill Cycle</th>
+					<th>Course Duration</th>
+					<th>Location</th>
+					<th>Subscription Date</th>
+					<th></th>
+					<th></th>
+				</tr>
+			<tbody>
+				<tr th:each="subscription : ${subscriptions}">
+					<td th:text="${subscription.drugName}">Crocin</td>
+					<td th:text="${subscription.quantity}">25</td>
+					<td th:text="${subscription.refillCycle}">1</td>
+					<td th:text="${subscription.courseDuration}">Active</td>
+					<td th:text="${subscription.location}">Bengaluru</td>
+					<td th:text="${subscription.subscriptionDate}">07/06/2021</td>
+					<td><a class="btn btn-danger" th:href="@{'/unsubscribe/'+${subscription.subscriptionId}}">Unsubscribe</button></td>
+					<td><a class="btn btn-primary" th:href="@{'/refill/'+${subscription.subscriptionId}}">Refill</button></td>
+				</tr>
+			</tbody>
+			</thead>
+		</table>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!--
+			<div class="item-card" th:each="subscription : ${subscriptions}" >
+			<div th:text="${subscription.drugName}">Drug Name</div>
+			<div th:text="${subscription.quantity}">Quantity</div>
+			<div th:text="${subscription.status}">Status</div>
+			<div th:text="${subscription.location}">Location</div>
+			<div th:text="${#dates.format(subscription.subscriptionDate, 'dd/MM/yyyy')}">dd/MM/yyyy</div>
+			 <a th:href="@{/subscribe(id=${dose.id})" class="btn button-modify" >Modify</a>  
+			</div>
+-->

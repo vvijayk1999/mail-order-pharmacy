@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head th:fragment="head">
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" sizes="32x32"
+	href="/resources/favicons/favicon.ico" />
+<title>[[${pageTitle}]] - Mail Order Pharmacy</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+	crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" type="text/css" href="/resources/index.css" />
+<link rel="stylesheet" type="text/css" href="/resources/signin.css" />
+</head>
+<body>
+	<header th:fragment="header-unauth">
+		<nav
+			class="navbar navbar-expand-lg navbar navbar-light fixed-top theme-color-1">
+			<div class="container">
+				<a class="navbar-brand" style="color: #FFF" href="/"> <img
+					src="/resources/logo.svg" alt="" width="30" height="30"
+					class="d-inline-block align-text-top" /> Mail Order Pharmacy
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarNav" aria-controls="navbarNav"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a style="color: #FFF" class="nav-link color-white" href="/login">Login</a></li>
+						<li class="nav-item"><a style="color: #FFF" class="nav-link color-white" href="/register">Register</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<header th:fragment="header-auth">
+		<nav
+			class="navbar navbar-expand-lg navbar navbar-light fixed-top theme-color-1">
+			<div class="container">
+				<a class="navbar-brand" style="color: #FFF" href="/home"> <img
+					src="/resources/logo.svg" alt="" width="30" height="30"
+					class="d-inline-block align-text-top" /> Mail Order Pharmacy
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarNav" aria-controls="navbarNav"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a style="color: #FFF" class="nav-link color-white" href="/drugs">Drugs</a></li>
+						<li class="nav-item"><a style="color: #FFF" class="nav-link color-white" href="/drugs/search">Search
+								Drugs</a></li>
+						<li class="nav-item"><a style="color: #FFF" class="nav-link color-white" href="/subscriptions">My
+								Subscriptions</a></li>
+						<li class="nav-item"><a style="color: #FFF" class="nav-link color-white" href="/logout">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments :: head"></head>
+<body>
+	<header th:replace="fragments :: header-auth"></header>
+	<div class="container container-padding">
+
+		<div class="card" th:each="drugLocation : ${drugLocations}">
+			<div class="card-body d-inline-flex justify-content-around">
+				<div class="d-flex flex-column align-items-center">
+					<h5 class="card-title" th:text="${drugLocation.drug.drugName}">Drug
+						Name</h5>
+					<h6 class="card-subtitle mb-2 text-muted"
+						th:text="${drugLocation.drug.manufacturer}">Manufacturer</h6>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item"
+							th:text="${'Manufacture Date: '+#dates.format(drugLocation.drug.mnfDate, 'dd/MM/YYYY')}">Manufacture
+							Date:</li>
+						<li class="list-group-item"
+							th:text="${'Expiration Date: '+#dates.format(drugLocation.drug.expDate, 'dd/MM/YYYY')}">Expiration
+							Date:</li>
+					</ul>
+				</div>
+				<table class="table table-fit">
+					<tr>
+						<td class="table-success">Location</td>
+						<td class="table-success">Quantity</td>
+						<td class="table-success"></td>
+					</tr>
+					<tr th:each="location : ${drugLocation.locations}">
+						<td th:text="${location.location}">Location</td>
+						<td th:text="${location.quantity}">Units</td>
+						<td><a class="btn btn-success"
+							th:href="@{/subscribe(drugId=${drugLocation.drug.drugId},location=${location.location})}">Subscribe</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

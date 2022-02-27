@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+	<header th:replace="fragments :: header-unauth"></header>
+	<div class="container container-padding">
+
+		<div class="main-img  justify-content-around">
+			<div class="d-flex flex-column align-items-center">
+				<div class="main-text">Register now and get your first free
+					delivery.</div>
+				<a class="btn register-now-btn" href="/register">Register</a>
+			</div>
+		</div>
+
+		<div class="about-us">
+
+			<h3>Why Mail Order Pharmacy</h3>
+			<div>A leading Pharmaceutical Benefits Management (PBM)
+				Organization wants to develop a Mail-Order Pharmacy module using
+				Microservices. PBM is a middle-man between an Insurance Company and
+				its members. Because of its size, it can negotiate large customer
+				contracts and negotiate with both pharmacies and pharmaceutical
+				companies to get the best rates for the drugs. Mail-order pharmacies
+				operate through your health insurance plan and can be cheaper and
+				more convenient than getting your medications from a local pharmacy.
+				A “mail-order” prescription means that you don’t have to pick up
+				your medication from a pharmacy; instead, it is delivered to your
+				doorstep.  There will also be a Member Portal to be developed part
+				of this scope that consumes these Microservices. The Portal allows
+				its members to subscribe for drugs refill, allows to pay bills etc.</div>
+
+		</div>
+		<div class="drugs">
+			<div class="justify-content-around">
+				<h3 class="d-flex flex-column align-items-center">Popular Drugs</h3>
+			</div>
+			<div class="row">
+				<div class="drug-item col-sm">
+					<img src='resources/images/drugs/1.png' width="250px"
+						height="250px" />
+					<div class="drug-name">Ventolin Inhaler</div>
+				</div>
+				<div class="drug-item col-sm">
+					<img src='resources/images/drugs/2.jpg' width="250px"
+						height="250px" />
+					<div class="drug-name">Lantus SoloStar</div>
+				</div>
+				<div class="drug-item col-sm">
+					<img src='resources/images/drugs/3.jpg' width="250px"
+						height="250px" />
+					<div class="drug-name">Crestor</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="drug-item col-sm">
+					<img src='resources/images/drugs/4.jpg' width="250px"
+						height="250px" />
+					<div class="drug-name">Crocin</div>
+				</div>
+				<div class="drug-item col-sm">
+					<img src='resources/images/drugs/5.jpg' width="250px"
+						height="250px" />
+					<div class="drug-name">Synthroid</div>
+				</div>
+				<div class="drug-item col-sm">
+					<img src='resources/images/drugs/6.jpg' width="250px"
+						height="250px" />
+					<div class="drug-name">Nexium-mups</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="drug-item col-sm">
+					<img src='resources/images/drugs/7.jpg' width="250px"
+						height="250px" />
+					<div class="drug-name">Lyrica</div>
+				</div>
+				<div class="drug-item col-sm">
+					<img src='resources/images/drugs/8.jpeg' width="250px"
+						height="250px" />
+					<div class="drug-name">Spiriva Respimat</div>
+				</div>
+				<div class="drug-item col-sm">
+					<img src='resources/images/drugs/1.png' width="250px"
+						height="250px" />
+					<div class="drug-name">Ventolin Inhaler</div>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+
+	<footer class="site-footer"
+		style="background-color: rgb(195, 223, 248);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+					<div>
+						<h3>About Us</h3>
+						<p>A leading Pharmaceutical Benefits Management (PBM)
+							Organization wants to develop a Mail-Order Pharmacy module using
+							Microservices. PBM is a middle-man between an Insurance Company
+							and its members.</p>
+					</div>
+
+				</div>
+
+
+				<div class="col-md-6 col-lg-3">
+					<div>
+						<h3>Contact Info</h3>
+						<ul>
+							<li>Bengaluru, India</li>
+							<li><a href="tel://23923929210">+91 123-456-789</a></li>
+							<li>vvijayk1999@github.com</li>
+						</ul>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="row pt-5 mt-5 text-center">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy;
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

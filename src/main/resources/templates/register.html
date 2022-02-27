@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+	<header th:replace="fragments :: header-unauth"></header>
+	<div class="container container-padding text-center">
+		<h3 class="alert-danger" th:if="${errorMessage}"
+			th:text="${errorMessage}"></h3>
+		<form class="form-signup" method="POST" th:object="${user}">
+			<img class="mb-4" src="/resources/logo-dark.svg" alt="" width="72"
+				height="72" />
+			<h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+
+
+
+			<div class="mb-3 row">
+				<input type="text" name="firstName" class="form-control"
+					th:field="*{firstName}" placeholder="First Name" required autofocus />
+				<div class="alert-danger"
+					th:each="e : ${#fields.errors('firstName')}" th:text="${e}"></div>
+			</div>
+
+			<div class="mb-3 row">
+				<input type="text" name="lastName" class="form-control"
+					th:field="*{lastName}" placeholder="Last Name" required autofocus />
+				<div class="alert-danger"
+					th:each="e : ${#fields.errors('lastName')}" th:text="${e}"></div>
+			</div>
+
+			<div class="mb-3 row">
+				<input type="tel" name="phontNumber" class="form-control"
+					th:field="*{phoneNumber}" placeholder="Mobile" required autofocus />
+				<div class="alert-danger"
+					th:each="e : ${#fields.errors('phoneNumber')}" th:text="${e}"></div>
+			</div>
+
+			<div class="mb-3 row">
+				<input type="email" name="emailId" class="form-control"
+					th:field="*{emailId}" placeholder="Email ID" required autofocus />
+				<div class="alert-danger" th:each="e : ${#fields.errors('emailId')}"
+					th:text="${e}"></div>
+			</div>
+			<div class="mb-3 row">
+				<input type="password" name="password" class="form-control"
+					th:field="*{password}" placeholder="Password" required />
+				<div class="alert-danger"
+					th:each="e : ${#fields.errors('password')}" th:text="${e}"></div>
+			</div>
+
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
+				Up</button>
+		</form>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <h1>Register</h1>
+<form method="POST" th:object="${user}">
+	<table>
+		<tr>
+			<td>Email ID:</td>
+			<td><input type="text" name="email" value=""
+				th:field="*{emailId}" /></td>
+		</tr>
+		<tr>
+			<td>Phone Number:</td>
+			<td><input type="text" th:field="*{phoneNumber}">
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td><input type="password" name="password"
+				th:field="*{password}" /></td>
+		</tr>
+		<tr>
+			<td>First Name:</td>
+			<td><input type="text" name="firstname" th:field="*{firstName}" /></td>
+		</tr>
+		<tr>
+			<td>Last Name:</td>
+			<td><input type="text" name="lastname" th:field="*{lastName}" /></td>
+		</tr>
+	</table>
+	<input name="submit" type="submit" value="submit" />
+</form> -->
